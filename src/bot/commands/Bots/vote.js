@@ -30,10 +30,10 @@ let bot = await Bots.findOne({botid: user.id}, { _id: false })
 Bots.findOne({
 botid: user.id}, (err, res) => {
 if(!res){
-return message.reply("Not Exists bot!")
+return message.reply("Bot Doesnt Exist")
 } 
 if(res.state == 'unverified'){
-      return message.reply("That bot not verified to recieve votes!")
+      return message.reply("That bot is not verified to recieve votes!")
 }
 res.votes = res.votes- + -1
 res.save()
@@ -42,7 +42,6 @@ return message.channel.send("Success voted for " + user.username)
 let e = new MessageEmbed()
 .setTitle('Vote Message')
 .addField(`Bot`, `<@${user.id}>`, true)
-.addField("Voter", message.author, true)
 .setThumbnail(bot.logo)
 .setTimestamp()
 .setColor(0x26ff00)
