@@ -1,0 +1,40 @@
+{
+    "name": "discordbotlist",
+    "version": "3.0.0",
+    "description": "A discord bot list.",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node src/index.js"
+    },
+    "dependencies": {
+        "body-parser": "1.19.0",
+        "canvas": "^2.6.1",
+        "canvas-constructor": "kyranet/CanvasConstructor",
+        "colors": "^1.4.0",
+        "cookie-parser": "^1.4.4",
+        "discord.js": "^12.2.0",
+        "dotenv": "^8.2.0",
+        "ejs": "^3.0.1",
+        "express": "^4.16.3",
+        "is-html": "^2.0.0",
+        "is-url": "1.2.4",
+        "klasa": "^0.5.0",
+        "module-alias": "^2.2.2",
+        "mongoose": "^5.9.10",
+        "node-fetch": "^2.6.0",
+        "node-pre-gyp": "^0.14.0",
+        "showdown": "^1.9.1",
+        "unirest": "^0.6.0"
+    },
+    "engines": {
+        "node": "12.x"
+    },
+    "_moduleAliases": {
+        "@root": ".",
+        "@bot": "./src/bot",
+        "@utils": "./src/utils",
+        "@routes": "./src/routes",
+        "@models": "./src/models",
+        "@structures": "./src/structures"
+    }
+}

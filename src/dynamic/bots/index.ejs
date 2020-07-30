@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta property="og:title" content="Bothalla List ™" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="A bot list where you can find discord bots to spice up your server." />
+    <meta name="description" content="A bot list where you can find discord bots to spice up your server." />
+    <meta name="og:image" content="/assets/img/logo.png" />
+    <meta name="theme-color" content="#d2efe6" />
+    <link href="https://fonts.googleapis.com/icon?family=Markazi+Text" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="shortcut icon" type="image/png" href="/assets/img/logo.png" />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/theme" rel="stylesheet">
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/vote.js"></script>
+    <title>Bothalla List ™</title>
+</head>
+
+<body>
+
+    <div id="navTop">
+        <span class="nav link" href="/">
+        <a href="/"><img src="/assets/img/logo.png"></a>
+        <span class="navtag">
+          
+          <a href="/"><span class="navtext">Bothalla List ™</span></a>
+        </span>
+        </span>
+
+
+
+        <a class="navtag search" id="searcher" href="/bots/search/">
+            <img id="searchimg" src="/assets/img/search.png" width="26px" height="26px">
+            <div class="navtext" id="search">Search</div>
+        </a>
+        <span class="dropdown">
+        <a class="navtag" id="login" href="/login">Login</a>
+        <span class="dd-content">
+          <a href="/join" target="_blank">Join Server</a><br />
+          <a href="/add">Add bot</a><br />
+          <a href="/docs">Api Docs</a><br />
+          <a href="/logout">Logout</a>
+        </span>
+        </span>
+    </div>
+
+
+    <div id="content">
+        <img id="bot-icon" width="180px" height="180px" style='border-color: <%= bcolour %>' src="<%= bot.logo %>?size=256">
+        <h2 class="right">
+            <%= bot.username %>
+        </h2>
+        <span class="right"><%= bot.servers ? bot.servers + " Servers" : "" %></span><br>
+        <span class="right"><%= bot.votes ? bot.votes + " Votes" : "" %></span>
+        <div class="right" style="margin-top: 20px;">
+            <%= bot.description %>
+        </div>
+        <div class="right" style="margin-top: 10px;"><strong>Prefix: </strong><code id="prefix"><%= bot.prefix %></code></div>
+        <div id="long">
+            <span class="<%= isURL ? '' : 'markdown-body ' %>"> <%- desc %> </span>
+        </div>
+        <a class="small button" target="_blank" href="<%= bot.invite ? bot.invite : `https://discordapp.com/oauth2/authorize?client_id=${bot.botid}&scope=bot&permissions=0` %> ">Invite</a>
+        <a class="small button" target="_blank" href="<%= `/bots/edit/${bot.botid}` %>">Edit Bot (Owner)</a>
+        <a class="small button" target="_blank" href="<%= `/api/embed/${bot.botid}` %>">Widget</a>
+        <a class="small button" onclick="voteclick()" id='votebot' >Vote bot</a>
+
+        <a id="by" href="/user/<%= person.user.id %>">
+        <img src="<%=person.user.tag != 'Unknown User'  ? person.user.displayAvatarURL() : '/assets/default-avatar.png' %>" height="30px" />
+        <span class="navtext"><%=person.user.tag %></span>
+      </a>
+    </div>
+    <div id="botOwnerGetter" style="display: none">
+        <%= person.user %>
+    </div>
+
+</body>
+
+</html>
