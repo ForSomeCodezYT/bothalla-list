@@ -1,9 +1,6 @@
-<div align="center">
- <br>
- 
+
 Bothalla Bot List
 =================
-</div>
 
 
 # About
