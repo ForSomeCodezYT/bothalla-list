@@ -37,12 +37,12 @@ a {
 }
 
 a:hover {
-    color: #FFD700;
+    color: #00ff8c;
     cursor: pointer;
 }
 
 .active-navtext {
-    color: #111 !important;
+    color: #00ff8c !important;
 }
 
 .navtag {
@@ -101,7 +101,7 @@ h2 {
     min-width: 300px;
     display: block;
     margin: 0 auto;
-    color: #FFD700
+    color: #FFF;
 }
 
 
@@ -128,10 +128,6 @@ h2 {
     display: inline-block;
     width: calc(100vw/4);
     transition: all 400ms ease;
-}
-
-.card:hover{
-  background-color: white;
 }
 
 .large {
@@ -229,7 +225,7 @@ h2 {
     position: relative;
     left: 300px;
     top: -200px;
-    color: #FFD700
+    color: #888888;
     width: calc(100% - 300px)
 }
 
@@ -272,7 +268,7 @@ h2 {
     text-transform: uppercase;
     transition: all 1s ease;
     cursor: pointer ;
-    color: #111;
+    color: #FFD700;
     display: block;
     margin: 8px auto;
     text-align: center;
@@ -288,11 +284,11 @@ h2 {
     content: "";
     position: absolute;
     z-index: -1;
-    background: #111;
+    background: #111
 }
 
 .button:hover {
-    color: #111;
+    color: #FFF;
 }
 
 .dd-content {
@@ -323,7 +319,7 @@ h2 {
     font-size: 16px;
     padding: 13px 15px;
     border-radius: 4px;
-    border: 1px solid #FFD700
+    border: 1px solid #888;
     width: 100%;
     outline: none;
     background-color: rgba(0, 0, 0, 0);
@@ -334,7 +330,7 @@ h2 {
 
 .input:not(:placeholder-shown).input:not(:focus)+.placeholder {
     transform: scale(.75) translateY(-39px) translateX(-5px);
-    color: #111
+    color: #888;
     z-index: 10 !important;
 }
 
