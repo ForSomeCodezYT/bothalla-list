@@ -61,7 +61,7 @@ route.post("/", async (req, res, next) => {
         let r = req.app.get('client').guilds.cache.get(GUILD_ID).roles.cache.find(r => r.id === BOT_VERIFIERS_ROLE_ID);
         await r.setMentionable(true)
         await req.app.get('client').channels.cache.find(c => c.id === MOD_LOG_ID).send(`<@${owners[0]}> added <@${bot.id}>: ${r}`);
-        r.setMentionable(false);
+        r.setMentionable(true)
         res.json({"redirect": "/success"});
     } catch (e) {
         res.json({"redirect": "/error?e=unknown"});
