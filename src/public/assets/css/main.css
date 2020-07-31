@@ -124,7 +124,6 @@ h2 {
 .card {
     padding: 20px;
     height: 340px;
-    box-shadow: 0 0 4px 0.5px #FFD470;
     margin: 20px;
     display: inline-block;
     width: calc(100vw/4);
@@ -142,7 +141,6 @@ h2 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    box-shadow: 0 0 4px 0.5px #888888;
 }
 
 .card a {
@@ -160,7 +158,7 @@ h2 {
 
 .nsfw {
     filter: blur(5px);
-    transition: 0.5s filter;
+    transition: 1s ease;
 }
 
 .nsfw:hover {
