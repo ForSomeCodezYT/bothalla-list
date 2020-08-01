@@ -33,14 +33,14 @@ if(!res){
 return message.reply("Bot Doesnt Exist")
 } 
 if(res.state == 'unverified'){
-      return message.reply("That bot is not verified to recieve votes!")
+      return message.reply("That bot is not verified so it cant get votes")
 }
 res.votes = res.votes- + -1
 res.save()
 return message.channel.send("Success voted for " + user.username)
 })
 let e = new MessageEmbed()
-.setTitle('${} Message`)
+.setTitle(`${message.author.username} has voted!}`)
 .addField(`Bot`, `<@${user.id}>`, true)
 .setThumbnail(bot.logo)
 .setTimestamp()
